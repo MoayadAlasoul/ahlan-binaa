@@ -210,6 +210,18 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
+      claim_admin_if_none: { Args: never; Returns: boolean }
+      create_order: {
+        Args: {
+          p_customer_name: string
+          p_customer_phone: string
+          p_items: Json
+          p_notes: string
+          p_pickup_date: string
+          p_pickup_time: string
+        }
+        Returns: string
+      }
       generate_order_number: { Args: never; Returns: string }
       get_order_by_number: { Args: { p_order_number: string }; Returns: Json }
       has_role: {
