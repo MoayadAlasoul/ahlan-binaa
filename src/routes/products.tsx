@@ -11,8 +11,8 @@ type ProductSearch = { q: string; cat: string };
 
 export const Route = createFileRoute("/products")({
   validateSearch: (search: Record<string, unknown>): ProductSearch => ({
-    q: typeof search.q === "string" ? search.q.slice(0, 80) : "",
-    cat: typeof search.cat === "string" ? search.cat.slice(0, 40) : "",
+    q: typeof search['q'] === "string" ? (search['q'] as string).slice(0, 80) : "",
+    cat: typeof search['cat'] === "string" ? (search['cat'] as string).slice(0, 40) : "",
   }),
   head: () => ({
     meta: [
@@ -133,7 +133,7 @@ function ProductsPage() {
             <ProductCard
               key={p.id}
               product={p}
-              categoryName={categoryById.get(p.category_id)?.name}
+              categoryName={categoryById.get(p.category_id)?.name ?? ""}
             />
           ))}
         </div>

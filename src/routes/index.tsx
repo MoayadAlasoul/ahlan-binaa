@@ -104,7 +104,7 @@ function HomePage() {
 
           <div className="mt-6 flex flex-wrap gap-3">
             <Button asChild size="lg">
-              <Link to="/products">
+              <Link to="/products" search={{ q: "", cat: "" }}>
                 تصفح المنتجات
                 <ArrowLeft className="h-4 w-4" />
               </Link>
@@ -138,7 +138,7 @@ function HomePage() {
             <h2 className="font-display text-2xl font-bold">أقسام مواد البناء</h2>
             <p className="text-sm text-muted-foreground">اختر القسم لعرض منتجاته</p>
           </div>
-          <Link to="/products" className="text-sm font-semibold text-primary hover:underline">
+          <Link to="/products" search={{ q: "", cat: "" }} className="text-sm font-semibold text-primary hover:underline">
             عرض الكل
           </Link>
         </div>

@@ -30,7 +30,7 @@ export function SiteFooter() {
         </div>
         <div className="space-y-2 text-sm">
           <h4 className="font-display font-bold">روابط سريعة</h4>
-          <Link to="/products" className="block hover:text-primary">
+          <Link to="/products" search={{ q: "", cat: "" }} className="block hover:text-primary">
             تصفح المنتجات
           </Link>
           <Link to="/cart" className="block hover:text-primary">
