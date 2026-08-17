@@ -27,7 +27,7 @@ function CartPage() {
         <div className="mt-10 rounded-2xl border border-dashed border-border bg-card p-12 text-center">
           <p className="text-muted-foreground">سلة الطلب فارغة حاليًا.</p>
           <Button asChild className="mt-5">
-            <Link to="/products">تصفح المنتجات</Link>
+            <Link to="/products" search={{ q: "", cat: "" }}>تصفح المنتجات</Link>
           </Button>
         </div>
       ) : (

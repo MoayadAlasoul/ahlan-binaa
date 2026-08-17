@@ -84,7 +84,7 @@ function CheckoutPage() {
       p_customer_phone: parsed.data.customerPhone,
       p_pickup_date: parsed.data.pickupDate,
       p_pickup_time: parsed.data.pickupTime,
-      p_notes: parsed.data.notes ?? null,
+      p_notes: parsed.data.notes ?? "",
       p_items: items.map((i) => ({ product_id: i.productId, quantity: i.quantity })),
     });
 

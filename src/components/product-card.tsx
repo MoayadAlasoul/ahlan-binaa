@@ -22,7 +22,7 @@ export function ProductCard({
   categoryName,
 }: {
   product: ProductRow;
-  categoryName?: string;
+  categoryName?: string | undefined;
 }) {
   const [qty, setQty] = useState(1);
   const { addItem } = useCart();
